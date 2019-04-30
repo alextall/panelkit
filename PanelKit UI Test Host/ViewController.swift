@@ -23,11 +23,11 @@ class ViewController: UIViewController, PanelManager {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		mapPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "MapPanelContentViewController") as! MapPanelContentViewController
+        mapPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "MapPanelContentViewController") as? MapPanelContentViewController
 
 		mapPanelVC = PanelViewController(with: mapPanelContentVC, contentDelegate: mapPanelContentVC, in: self)
 
-		textPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "TextPanelContentViewController") as! TextPanelContentViewController
+        textPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "TextPanelContentViewController") as? TextPanelContentViewController
 
 		textPanelVC = PanelViewController(with: textPanelContentVC, contentDelegate: textPanelContentVC, in: self)
 
